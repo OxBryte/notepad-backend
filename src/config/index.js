@@ -10,13 +10,16 @@ const config = {
     : ['http://localhost:3000', 'http://localhost:3001'],
 
   // Database configuration
-  database: {
+ database: {
+    // Support for DATABASE_URL (Neon connection string)
+    url: process.env.DATABASE_URL,
+    // Individual connection parameters (fallback)
     host: process.env.DB_HOST || 'localhost',
     port: process.env.DB_PORT || 5432,
     name: process.env.DB_NAME || 'public_notepad',
     user: process.env.DB_USER || 'postgres',
     password: process.env.DB_PASSWORD,
-    ssl: process.env.NODE_ENV === 'production',
+    ssl: true, // Always true for Neon
     poolSize: process.env.DB_POOL_SIZE || 20,
   },
 
