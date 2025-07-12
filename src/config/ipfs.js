@@ -16,13 +16,17 @@ const testConnection = async () => {
     logger.info('IPFS (Pinata) connection successful');
   } catch (error) {
     logger.error('IPFS (Pinata) authentication failed:', error.message);
-    throw error;
+    // Don't throw error, just log it and continue
+    // This prevents the app from crashing if IPFS is not available
   }
 };
 
-// Initialize connection test
+// Initialize connection test with proper error handling
 if (config.nodeEnv !== 'test') {
-  testConnection();
+  testConnection().catch(error => {
+    logger.error('IPFS connection test failed:', error.message);
+    // Don't re-throw to prevent unhandled promise rejection
+  });
 }
 
 const uploadJSON = async (data, options = {}) => {

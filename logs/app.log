@@ -1,0 +1,4 @@
+{"level":"info","message":"🚀 Server running on port 3001 in development mode","service":"public-notepad-api","timestamp":"2025-07-12T03:53:41.003Z","version":"1.0.0"}
+{"level":"error","message":"IPFS (Pinata) authentication failed:","service":"public-notepad-api","timestamp":"2025-07-12T03:53:41.747Z","version":"1.0.0"}
+{"level":"info","message":"🚀 Server running on port 3001 in development mode","service":"public-notepad-api","timestamp":"2025-07-12T03:54:14.424Z","version":"1.0.0"}
+{"level":"error","message":"IPFS (Pinata) authentication failed:","service":"public-notepad-api","timestamp":"2025-07-12T03:54:15.239Z","version":"1.0.0"}
