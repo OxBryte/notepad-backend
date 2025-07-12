@@ -2,3 +2,36 @@
 {"level":"error","message":"IPFS (Pinata) authentication failed:","service":"public-notepad-api","timestamp":"2025-07-12T03:53:41.747Z","version":"1.0.0"}
 {"level":"info","message":"🚀 Server running on port 3001 in development mode","service":"public-notepad-api","timestamp":"2025-07-12T03:54:14.424Z","version":"1.0.0"}
 {"level":"error","message":"IPFS (Pinata) authentication failed:","service":"public-notepad-api","timestamp":"2025-07-12T03:54:15.239Z","version":"1.0.0"}
+{"level":"info","message":"🚀 Server running on port 3001 in development mode","service":"public-notepad-api","timestamp":"2025-07-12T03:55:36.585Z","version":"1.0.0"}
+{"level":"error","message":"IPFS (Pinata) authentication failed:","service":"public-notepad-api","timestamp":"2025-07-12T03:55:37.355Z","version":"1.0.0"}
+{"level":"info","message":"✅ Neon database connected successfully","service":"public-notepad-api","timestamp":"2025-07-12T03:55:38.380Z","version":"1.0.0"}
+{"level":"warn","message":"IPFS (Pinata) credentials not configured. IPFS functionality will be disabled.","service":"public-notepad-api","timestamp":"2025-07-12T03:56:17.754Z","version":"1.0.0"}
+{"level":"info","message":"🚀 Server running on port 3001 in development mode","service":"public-notepad-api","timestamp":"2025-07-12T03:56:17.763Z","version":"1.0.0"}
+{"level":"info","message":"✅ Neon database connected successfully","service":"public-notepad-api","timestamp":"2025-07-12T03:56:20.076Z","version":"1.0.0"}
+{"level":"warn","message":"IPFS (Pinata) credentials not configured. IPFS functionality will be disabled.","service":"public-notepad-api","timestamp":"2025-07-12T03:56:22.991Z","version":"1.0.0"}
+{"level":"info","message":"🚀 Server running on port 3001 in development mode","service":"public-notepad-api","timestamp":"2025-07-12T03:56:23.103Z","version":"1.0.0"}
+{"level":"warn","message":"IPFS (Pinata) credentials not configured. IPFS functionality will be disabled.","service":"public-notepad-api","timestamp":"2025-07-12T03:56:23.513Z","version":"1.0.0"}
+{"level":"info","message":"🚀 Server running on port 3001 in development mode","service":"public-notepad-api","timestamp":"2025-07-12T03:56:23.520Z","version":"1.0.0"}
+{"level":"info","message":"✅ Neon database connected successfully","service":"public-notepad-api","timestamp":"2025-07-12T03:56:24.959Z","version":"1.0.0"}
+{"level":"warn","message":"IPFS (Pinata) credentials not configured. IPFS functionality will be disabled.","service":"public-notepad-api","timestamp":"2025-07-12T03:56:27.619Z","version":"1.0.0"}
+{"level":"info","message":"🚀 Server running on port 3001 in development mode","service":"public-notepad-api","timestamp":"2025-07-12T03:56:27.625Z","version":"1.0.0"}
+{"level":"info","message":"✅ Neon database connected successfully","service":"public-notepad-api","timestamp":"2025-07-12T03:56:29.608Z","version":"1.0.0"}
+{"level":"warn","message":"IPFS (Pinata) credentials not configured. IPFS functionality will be disabled.","service":"public-notepad-api","timestamp":"2025-07-12T03:56:37.864Z","version":"1.0.0"}
+{"level":"info","message":"🚀 Server running on port 3001 in development mode","service":"public-notepad-api","timestamp":"2025-07-12T03:56:37.871Z","version":"1.0.0"}
+{"level":"info","message":"✅ Neon database connected successfully","service":"public-notepad-api","timestamp":"2025-07-12T03:56:40.007Z","version":"1.0.0"}
+{"level":"warn","message":"IPFS (Pinata) credentials not configured. IPFS functionality will be disabled.","service":"public-notepad-api","timestamp":"2025-07-12T03:56:45.796Z","version":"1.0.0"}
+{"level":"info","message":"🚀 Server running on port 3001 in development mode","service":"public-notepad-api","timestamp":"2025-07-12T03:56:45.804Z","version":"1.0.0"}
+{"level":"info","message":"✅ Neon database connected successfully","service":"public-notepad-api","timestamp":"2025-07-12T03:56:47.299Z","version":"1.0.0"}
+{"level":"warn","message":"IPFS (Pinata) credentials not configured. IPFS functionality will be disabled.","service":"public-notepad-api","timestamp":"2025-07-12T03:56:51.191Z","version":"1.0.0"}
+{"level":"info","message":"🚀 Server running on port 3001 in development mode","service":"public-notepad-api","timestamp":"2025-07-12T03:56:51.202Z","version":"1.0.0"}
+{"level":"info","message":"✅ Neon database connected successfully","service":"public-notepad-api","timestamp":"2025-07-12T03:56:52.717Z","version":"1.0.0"}
+{"ip":"::1","level":"info","message":"GET /","service":"public-notepad-api","timestamp":"2025-07-12T03:57:16.488Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","version":"1.0.0"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"GET","path":"/","service":"public-notepad-api","timestamp":"2025-07-12T03:57:16.490Z","version":"1.0.0"}
+{"ip":"::1","level":"info","message":"GET /favicon.ico","service":"public-notepad-api","timestamp":"2025-07-12T03:57:18.455Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","version":"1.0.0"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"GET","path":"/favicon.ico","service":"public-notepad-api","timestamp":"2025-07-12T03:57:18.457Z","version":"1.0.0"}
+{"ip":"::1","level":"info","message":"GET /api","service":"public-notepad-api","timestamp":"2025-07-12T03:57:28.530Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","version":"1.0.0"}
+{"ip":"::1","level":"warn","message":"Route not found","method":"GET","path":"/api","service":"public-notepad-api","timestamp":"2025-07-12T03:57:28.534Z","version":"1.0.0"}
+{"ip":"::1","level":"info","message":"GET /health","service":"public-notepad-api","timestamp":"2025-07-12T03:58:13.113Z","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36","version":"1.0.0"}
+{"level":"warn","message":"IPFS (Pinata) credentials not configured. IPFS functionality will be disabled.","service":"public-notepad-api","timestamp":"2025-07-12T03:58:59.423Z","version":"1.0.0"}
+{"level":"info","message":"🚀 Server running on port 3001 in development mode","service":"public-notepad-api","timestamp":"2025-07-12T03:58:59.430Z","version":"1.0.0"}
+{"level":"info","message":"✅ Neon database connected successfully","service":"public-notepad-api","timestamp":"2025-07-12T03:59:01.050Z","version":"1.0.0"}

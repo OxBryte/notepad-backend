@@ -1,7 +1,7 @@
 // src/config/ipfs.js
-const pinataSDK = require('@pinata/sdk');
-const config = require('./index');
-const logger = require('../utils/logger');
+const pinataSDK = require("@pinata/sdk");
+const config = require("./index");
+const logger = require("../utils/logger");
 
 // Initialize Pinata
 const pinata = new pinataSDK(
@@ -9,22 +9,39 @@ const pinata = new pinataSDK(
   config.ipfs.pinataSecretKey
 );
 
+// Check if IPFS credentials are configured
+const isIPFSConfigured = () => {
+  return (
+    config.ipfs.pinataApiKey &&
+    config.ipfs.pinataSecretKey &&
+    config.ipfs.pinataApiKey !== "your_pinata_api_key_here" &&
+    config.ipfs.pinataSecretKey !== "your_pinata_secret_key_here"
+  );
+};
+
 // Test authentication on startup
 const testConnection = async () => {
+  if (!isIPFSConfigured()) {
+    logger.warn(
+      "IPFS (Pinata) credentials not configured. IPFS functionality will be disabled."
+    );
+    return;
+  }
+
   try {
     await pinata.testAuthentication();
-    logger.info('IPFS (Pinata) connection successful');
+    logger.info("IPFS (Pinata) connection successful");
   } catch (error) {
-    logger.error('IPFS (Pinata) authentication failed:', error.message);
+    logger.error("IPFS (Pinata) authentication failed:", error.message);
     // Don't throw error, just log it and continue
     // This prevents the app from crashing if IPFS is not available
   }
 };
 
 // Initialize connection test with proper error handling
-if (config.nodeEnv !== 'test') {
-  testConnection().catch(error => {
-    logger.error('IPFS connection test failed:', error.message);
+if (config.nodeEnv !== "test") {
+  testConnection().catch((error) => {
+    logger.error("IPFS connection test failed:", error.message);
     // Don't re-throw to prevent unhandled promise rejection
   });
 }
@@ -35,7 +52,7 @@ const uploadJSON = async (data, options = {}) => {
       pinataMetadata: {
         name: `idea-${Date.now()}`,
         keyvalues: {
-          type: 'idea-metadata',
+          type: "idea-metadata",
           timestamp: new Date().toISOString(),
         },
       },
@@ -54,8 +71,8 @@ const uploadJSON = async (data, options = {}) => {
     };
 
     const result = await pinata.pinJSONToIPFS(data, mergedOptions);
-    
-    logger.info('JSON uploaded to IPFS', {
+
+    logger.info("JSON uploaded to IPFS", {
       hash: result.IpfsHash,
       size: result.PinSize,
     });
@@ -66,8 +83,8 @@ const uploadJSON = async (data, options = {}) => {
       url: `${config.ipfs.gateway}${result.IpfsHash}`,
     };
   } catch (error) {
-    logger.error('Failed to upload JSON to IPFS:', error.message);
-    throw new Error('Failed to upload metadata to IPFS');
+    logger.error("Failed to upload JSON to IPFS:", error.message);
+    throw new Error("Failed to upload metadata to IPFS");
   }
 };
 
@@ -77,7 +94,7 @@ const uploadFile = async (fileBuffer, fileName, options = {}) => {
       pinataMetadata: {
         name: fileName,
         keyvalues: {
-          type: 'file',
+          type: "file",
           timestamp: new Date().toISOString(),
         },
       },
@@ -93,8 +110,8 @@ const uploadFile = async (fileBuffer, fileName, options = {}) => {
     };
 
     const result = await pinata.pinFileToIPFS(fileBuffer, mergedOptions);
-    
-    logger.info('File uploaded to IPFS', {
+
+    logger.info("File uploaded to IPFS", {
       hash: result.IpfsHash,
       size: result.PinSize,
       fileName,
@@ -106,8 +123,8 @@ const uploadFile = async (fileBuffer, fileName, options = {}) => {
       url: `${config.ipfs.gateway}${result.IpfsHash}`,
     };
   } catch (error) {
-    logger.error('Failed to upload file to IPFS:', error.message);
-    throw new Error('Failed to upload file to IPFS');
+    logger.error("Failed to upload file to IPFS:", error.message);
+    throw new Error("Failed to upload file to IPFS");
   }
 };
 
@@ -119,8 +136,8 @@ const getMetadata = async (hash) => {
     }
     return await response.json();
   } catch (error) {
-    logger.error('Failed to fetch metadata from IPFS:', error.message);
-    throw new Error('Failed to fetch metadata from IPFS');
+    logger.error("Failed to fetch metadata from IPFS:", error.message);
+    throw new Error("Failed to fetch metadata from IPFS");
   }
 };
 
@@ -130,4 +147,5 @@ module.exports = {
   uploadFile,
   getMetadata,
   testConnection,
+  isIPFSConfigured,
 };
